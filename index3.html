@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").click(function(){
+                $("p").hide(1000);
+            })
+        });
+        $(document).ready(function () {
+            $("#p2").click(function(){
+                $("p").show(2000);
+            })
+        });
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle();
+
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="p1">隐藏</button>
+    <button id="p2">显示</button>
+    <button>隐藏、显示</button>
+    <p >是不是有惊喜？</p>
+</body>
+</html>

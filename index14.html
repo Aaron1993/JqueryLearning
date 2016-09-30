@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function(){
+                $("#div1").load("text/text",function (responseTxt,statusTxt,xhr) {
+                        if (statusTxt=="success")
+                            alert("加载成功！");
+                        if(statusTxt=="error")
+                            alert("加载失败:"+xhr.status+" "+xhr.statusText);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+    <button id="btn">点击加载外部文件</button>
+</body>
+</html>

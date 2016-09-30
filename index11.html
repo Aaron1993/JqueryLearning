@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        table{
+            border-collapse:collapse;
+            border-spacing: 0;
+
+
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("table").append("<tr>  <td><input type='text' height='50px' width='200px' style='border-style: none'></td> <td><input type='text' height='50px' width='200px' style='border-style: none'></td></tr>");
+            })
+        });
+        $(document).ready(function () {
+            $("#btn2").click(function () {
+                $("table").after("<h3>制表日期:</h3>"+new Date().getFullYear()+"年"+new Date().getMonth()+"月"+new Date().getDate()+"日");
+            })
+        });
+        $(document).ready(function () {
+            $("#btn3").click(function () {
+                $("td").remove(".ss");
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn">添加一行</button><br><br>
+<button id="btn2">在表格后</button><br><br>
+<button id="btn3">删除</button>
+    <table border="1" align="center">
+        <tr>
+            <td><input type="text" height="50px" width="200px" style="border-style: none" class="ss"></td>
+            <td><input type="text" height="50px" width="200px" style="border-style: none"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

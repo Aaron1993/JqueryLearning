@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var object1={
+                apple:0,
+                banana:{weight:50,price:100},
+                cherry:97
+            };
+            var object2={
+                banana:{price:200},
+                duian:200
+            };
+            $.extend(object1,object2);
+            var printObj=typeof JSON !="undefined" ? JSON.stringify:function (obj) {
+                var arr=[];
+                $.each(obj,function (key,val) {
+                    var next=key+":";
+                    next+=$.isPlainObject(val)?printObj(val):val;
+                    arr.push(next );
+                });
+                return "{"+arr.join(",")+"}";
+            };
+            $("#div1").append(printObj(object1));
+        });
+
+    </script>
+</head>
+<body>
+   <div id="div1"></div>
+</body>
+</html>

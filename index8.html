@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#div1").animate({
+                        width:'+=100px',
+                        height:'+=50px',
+                        backgroundColor:'red',
+                        left:'200px',
+                        opacity:'0.5',
+                        fontSize:'3em'
+                },"slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="btn">开始</button><br><br>
+    <div id="div1" style="width: 80px;height: 80px;background-color: #0573bd;position: absolute">hello</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.get("js/jk.js",function (data,status) {
+                    alert("数据 "+data+"<br>"+"状态："+status);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>dianji</button>
+</body>
+</html>

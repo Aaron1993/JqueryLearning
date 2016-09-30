@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){//ready函数来防止文档加载之前执行jQuery函数
+            $("p:first").click(function(){
+                $(this).hide();
+            })
+        });
+        $(document).ready(function(){
+            $("#p2").mouseenter(function(){
+                alert("鼠标移动");
+            })
+        });
+        $(document).ready(function () {
+            $("#p2").mouseleave(function () {
+                alert("一开");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="p1" class="tt">点我消失</p>
+    <p id="p2">消失</p>
+
+</body>
+</html>

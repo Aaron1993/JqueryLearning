@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").parentsUntil("ul").css({"color":"red","border":"solid 3px red"});
+        })
+    </script>
+    <style>
+        .ancestors *{
+            display: block;
+            border: solid 2px lightseagreen;
+            color: lightseagreen;
+            padding: 5px;
+            margin: 15px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="ancestors">
+        <div style="width: 500px">曾祖父元素 div
+            <ul>ul 祖父元素
+                <li>li 父元素
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 500px"> 祖父元素 div
+            <p>父元素
+                <span>span</span>
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

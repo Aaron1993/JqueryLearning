@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        #top,#bottom{
+            padding: 5px;
+            text-align: center;
+            background-color: aquamarine;
+            border: solid 1px #0573bd;
+        }
+        #bottom{
+            padding: 50px;
+            display: none;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#top").click(function () {
+                $("#bottom").slideToggle(1000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="top">点我滑动</div>
+    <div id="bottom">hello World!!</div>
+</body>
+</html>

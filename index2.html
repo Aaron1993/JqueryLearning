@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").hover(function(){
+                alert("aaaa");
+            },
+                    function () {
+                        alert("xxxx");
+                    });
+        });
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color","red");
+            });
+            $("input").blur(function () {
+                $(this).css("background-color","#ffffff");
+            })
+        })
+    </script>
+</head>
+<body>
+    <p id="p1">点我</p>
+    <p id="p2"></p>
+    name:<input id="in1">
+    email:<input id="in2">
+</body>
+</html>

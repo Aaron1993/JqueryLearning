@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("li").each(function () {
+                    alert($(this).text());
+                })
+            })
+        });
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                var x=$("p").get(0);
+                $("div").text(x.nodeName+""+x.innerHTML);
+               // alert(x.nodeName+""+x.innerHTML);
+
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>数二</li>
+        <li>婴儿</li>
+        <li>数据结构</li>
+    </ul><br>
+<button id="btn">点击</button>
+    <button id="btn1">点击11</button>
+<p>这是一个段落</p>
+<div ></div>
+</body>
+</html>
